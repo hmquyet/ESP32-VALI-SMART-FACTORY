@@ -1,4 +1,4 @@
-/* * Data converted from D:/ESP32/VALI/main/favicon.ico
+/* * Data converted from D:/ESP32/MACHINE/VALI/main/favicon.ico
  */
 .data
 .section .rodata.embedded

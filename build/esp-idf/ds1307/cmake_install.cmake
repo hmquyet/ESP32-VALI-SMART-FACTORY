@@ -1,4 +1,4 @@
-# Install script for directory: D:/ESP32/VALI/include/ds1307
+# Install script for directory: D:/ESP32/MACHINE/VALI/include/ds1307
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

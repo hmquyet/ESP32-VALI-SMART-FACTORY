@@ -56,8 +56,8 @@
 #define SPI_DMA_CHAN 1
 #define MOUNT_POINT "/sdcard"
 
-#define CONFIG_WIFI_SSID "5k 1 tiếng"   // 5k 1 tiếng
-#define CONFIG_WIFI_PASSWORD "12345678" // 12345678
+#define CONFIG_WIFI_SSID "Fablab 1"   // 5k 1 tiếng
+#define CONFIG_WIFI_PASSWORD "Fablab123" // 12345678
 
 #define SSID CONFIG_WIFI_SSID
 #define PASSWORD CONFIG_WIFI_PASSWORD
@@ -115,7 +115,6 @@ enum machine
   Disconnect,
   Connected,
   Idle,
-
 };
 static esp_mqtt_client_handle_t client = NULL;
 static xQueueHandle button_events;
@@ -730,13 +729,11 @@ static void gpio_task(void *arg)
         // write_to_sd(message_text, MACHINE_STATUS_FILE);
         //  printf(message_text);
 
-        if (injection_time > 40)
-        {
           ds3231_get_time(&rtc_i2c, &inject_time);
           sprintf(message_mqtt, "[{%cname%c: %cinjectionTime%c,%cvalue%c: %f,%ctimestamp%c: %c%04d-%02d-%02dT%02d:%02d:%02d%c}]",
                   34, 34, 34, 34, 34, 34, injection_time, 34, 34, 34, inject_time.tm_year, inject_time.tm_mon, inject_time.tm_mday, inject_time.tm_hour, inject_time.tm_min, inject_time.tm_sec, 34);
           esp_mqtt_client_publish(client, INJECTION_TIME_TOPIC, message_mqtt, 0, 1, 1);
-        }
+        
         // sprintf(message_text, "%04d-%02d-%02dT%02d:%02d:%02d,%f",
         //         inject_time.tm_year, inject_time.tm_mon, inject_time.tm_mday, inject_time.tm_hour, inject_time.tm_min, inject_time.tm_sec, last_running_time);
 
@@ -1104,7 +1101,7 @@ static void app_notifications(void *arg)
   char message_mqtt[500];
 
   esp_mqtt_client_config_t mqttConfig = {
-      .uri = "mqtt://52.231.118.126:1883",
+      .uri = "mqtt://52.141.29.70:1883",
       // .username = CONFIG_USER_NAME,
       //.password = CONFIG_USER_PASSWORD,
       .disable_clean_session = false,

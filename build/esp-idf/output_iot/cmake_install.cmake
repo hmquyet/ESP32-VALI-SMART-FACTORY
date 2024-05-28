@@ -1,4 +1,4 @@
-# Install script for directory: D:/ESP32/VALI/include/output_iot
+# Install script for directory: D:/ESP32/MACHINE/VALI/include/output_iot
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

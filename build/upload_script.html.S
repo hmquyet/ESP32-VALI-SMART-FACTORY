@@ -1,4 +1,4 @@
-/* * Data converted from D:/ESP32/VALI/main/upload_script.html
+/* * Data converted from D:/ESP32/MACHINE/VALI/main/upload_script.html
  */
 .data
 .section .rodata.embedded

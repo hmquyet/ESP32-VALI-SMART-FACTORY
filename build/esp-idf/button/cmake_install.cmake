@@ -1,4 +1,4 @@
-# Install script for directory: D:/ESP32/VALI/include/button
+# Install script for directory: D:/ESP32/MACHINE/VALI/include/button
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
